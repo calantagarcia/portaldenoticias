@@ -12,19 +12,23 @@
     --text-color-primary: #F1F5F9;
     --text-color-secondary: #CBD5E1;
 
-    --font-family: "Archivo", sans-serif;
+    --font-family: 'Archivo', sans-serif;
     --h1: 800 24/135% var(--font-family);
     --h2: 800 16/140% var(--font-family);
     --h3: 800 14/140% var(--font-family);
     --text-span: 600 14/145% var(--font-family);
     --text: 400 16/140% var(--font-family);
     --text-sm: 400 14/160% var(--font-family);
+    
 
 
 }
 
 body {
-    font: var(--text);
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
     color: var(--text-color-primary);
     background-color: var(--bg-color);
 }
@@ -40,4 +44,20 @@ a:hover {
 
 h1, h2, h3 {
     font: inherit;
+}
+
+/* utility-first */
+.grid {
+    display: grid;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+
+.container {
+    max-width: 1280px;
+    padding-inline: 32px;
+    margin-inline: auto;
+
 }
